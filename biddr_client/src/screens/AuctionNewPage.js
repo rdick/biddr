@@ -34,7 +34,7 @@ const AuctionNewPage = props => {
                 <div className='welcome-title'>
                     <h1 className='luxor-auctions'>New Auction</h1>
 
-                    <h3 className='welcome-description'> Please Fill Out The Following</h3>
+                    <h3 className='welcome-description' style={{ fontSize: "2em" }}> Please Fill Out The Following</h3>
                     <p>{error}</p>
                     <form onSubmit={handleSubmit} className='new-form'>
 
