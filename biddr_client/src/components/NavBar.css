@@ -1,0 +1,35 @@
+.nav-bar {
+    min-height: 2em;
+    width: 100vw;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+.nav-logo {
+    font-size: 1.5em;
+    font-family: 'Cinzel', serif;
+}
+
+.nav-item {
+    text-decoration: none;
+    text-align: center;
+    align-self: flex-end;
+    padding-bottom: 0.75em;
+    color: #121212;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1em;
+    font-weight: 100;
+    transition: border-bottom 1s;
+}
+
+.nav-item:hover {
+    font-weight: 200;
+    border-bottom: black solid 1px;
+}

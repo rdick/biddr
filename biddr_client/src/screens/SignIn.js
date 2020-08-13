@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Session } from '../api/session'
+import './SignIn.css'
 
 const SignIn = props => {
 
@@ -58,6 +59,10 @@ const SignIn = props => {
                     <button>Submit</button>
                 </div>
             </form>
+
+            <div class="fill">
+                <img src="https://image.freepik.com/free-photo/abstract-background-luxury-cloth-liquid-wave-wavy-folds_34170-23.jpg" alt="" />
+            </div>
         </div>
     );
 };

@@ -1,0 +1,50 @@
+.new-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+.new-input {
+    
+    margin: 1em 0;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: lightgray;
+    background-color: #5050;
+    border: none;
+    border-bottom: grey solid 1px;
+    
+}
+
+.new-2inputs-container {
+    display: flex;
+    margin-top: 2em;
+}
+
+.input-name {
+    width: 25em;
+}
+
+.input-description {
+    height: 8em;
+    width: 23em;
+    border: grey solid 1px;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 1em
+}
+
+.input-date {
+    margin: 0 1em;
+}
+
+.input-price {
+    padding-bottom: 3px;
+    margin: 0 1em;
+}
+
+.new-submit {
+    margin-top: 3em;
+}
+

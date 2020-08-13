@@ -42,7 +42,6 @@ function App() {
     <BrowserRouter>
       <header>
         <NavBar currentUser={currentUser} signOut={destroySession} />
-        <Link to='/auctions/new'><button>New Auction</button></Link>
       </header>
       <div className="ui container App">
         <Switch>

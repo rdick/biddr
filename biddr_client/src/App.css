@@ -9,7 +9,11 @@
 
 /* AuctionIndexPage */
 
-
+.AuctionIndexPage {
+  background-image: url('/01.main_auction');
+  width: 100vh;
+  height: 100vw;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
