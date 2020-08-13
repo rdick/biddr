@@ -32,33 +32,78 @@ const SignIn = props => {
 
     return (
         <div>
-            <h1>Sign In</h1>
-            <p>{error}</p>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="email">Email</label>
-                    <input
-                        name="email"
-                        id="email"
-                        type="text"
-                        onChange={handleChange}
-                        value={text1.email}
-                    />
+
+            <div className='welcome-container'>
+                <div className='welcome-title' style={{ marginTop: '10em' }}>
+                    <h1 className='luxor-auctions'>Sign In</h1>
+
+                    <h3 className='welcome-description'> Please Sign In</h3>
+                    <p>{error}</p>
+                    <form onSubmit={handleSubmit} className='new-form'>
+
+                        {/* <input
+                            className='new-input input-name'
+                            name="title"
+                            id="title"
+                            type="text"
+                            placeholder="Auction Name"
+                            onChange={handleChange}
+                            value={text1.title}
+                        />
+
+                        <textarea
+                            className='new-input input-description'
+                            name="description"
+                            id="description"
+                            type="text"
+                            placeholder="Auction Description"
+                            onChange={handleChange}
+                            value={text1.description}
+                        />
+                        <div className='new-2inputs-container'>
+                            <input
+                                className='new-input input-date'
+                                name="ends_at"
+                                id="ends_at"
+                                type="date"
+                                placeholder="DATE"
+                                onChange={handleChange}
+                                value={text1.ends_at}
+                            />
+
+                            <input
+                                className='new-input input-price'
+                                name="reserve_price"
+                                id="reserve_price"
+                                type="number"
+                                placeholder="Reserve Price"
+                                onChange={handleChange}
+                                value={text1.reserve_price}
+                            />
+                        </div> */}
+                        <input
+                            className='new-input input-signin'
+                            name="email"
+                            id="email"
+                            type="text"
+                            placeholder="Email"
+                            onChange={handleChange}
+                            value={text1.email}
+                        />
+                        <input
+                            className='new-input input-signin'
+                            name="password"
+                            id="password"
+                            type="password"
+                            placeholder="Password"
+                            onChange={handleChange}
+                            value={text1.password}
+                        />
+                        <button className='buy-sell-button new-submit'>Submit</button>
+
+                    </form>
                 </div>
-                <div>
-                    <label htmlFor="password">Password</label>
-                    <input
-                        name="password"
-                        id="password"
-                        type="text"
-                        onChange={handleChange}
-                        value={text1.password}
-                    />
-                </div>
-                <div>
-                    <button>Submit</button>
-                </div>
-            </form>
+            </div>
 
             <div class="fill">
                 <img src="https://image.freepik.com/free-photo/abstract-background-luxury-cloth-liquid-wave-wavy-folds_34170-23.jpg" alt="" />
