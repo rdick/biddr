@@ -42,29 +42,31 @@ const AuctionShowPage = props => {
 
     function handleSubmit(event) {
         event.preventDefault()
-        console.log('whats', auction.binds)
+
         let firstbid = 0 && Object.values(auction.bids)["0"].price
         if (text1.price < firstbid) {
-            event.preventDefault()
             setError("Your Bid Must Be Higher Then The Last Bid")
         } else {
 
+            resultBid()
 
-            Bid.create(text1)
-                .then(data => {
-                    if (data.status === 422) {
-                        setError(data.error)
-                    } else {
-                        console.log(data)
 
-                        setError("")
-                    }
-
-                })
-            theBest()
         }
     }
 
+    const resultBid = async () => {
+        await Bid.create(text1)
+            .then(data => {
+                if (data.status === 422) {
+                    setError(data.error)
+                } else {
+                    console.log(data)
+
+                    setError("")
+                }
+            })
+        await theBest()
+    }
 
     if (isLoading) {
         return (

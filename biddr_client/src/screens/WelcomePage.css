@@ -1,0 +1,29 @@
+.welcome-container {
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.welcome-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color:white
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.fill img {
+    filter: brightness(25%);
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+}

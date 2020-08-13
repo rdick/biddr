@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './AuctionIndexPage.css'
 import { Auction } from '../api/auction'
 import { Link } from 'react-router-dom'
 
@@ -26,7 +27,7 @@ const AuctionIndexPage = props => {
     }
     else {
         return (
-            <main className="AuctionIndexPage Page">
+            <main className="AuctionIndexPage">
                 <h2 className="ui horizontal divider header">Auctions</h2>
                 <ul className="ui list">
                     {auctions.map((auction) => (
