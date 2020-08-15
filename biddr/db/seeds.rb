@@ -32,7 +32,8 @@ NUM_AUCTION.times do
         user: users.sample, 
         reserve_price: Faker::Number.between(from:500, to:1000),
         created_at: created_at,
-        updated_at: created_at
+        updated_at: created_at,
+        picture: "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
     )
     if a.valid? 
         a.bids = rand(0..5).times.map do 

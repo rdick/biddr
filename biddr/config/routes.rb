@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :auctions, only: [:index, :show, :create,]
       resources :bids, only: [:create]
       resource :session, only: [:create, :destroy]
+      get("/users/current", to: "sessions#current")
     end
   end
 
