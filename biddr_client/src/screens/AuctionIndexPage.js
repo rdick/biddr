@@ -28,16 +28,22 @@ const AuctionIndexPage = props => {
     else {
         return (
             <main className="AuctionIndexPage">
-                <h2 className="ui horizontal divider header">Auctions</h2>
-                <ul className="ui list">
+                <div style={{ marginTop: '3em' }}>
+                    <h2 className="luxor-auctions">Auctions</h2>
+                </div>
+                <div className='auction-items'>
                     {auctions.map((auction) => (
-                        <div key={auction.id} className="ui raised clearing segment">
-                            <h3 className="ui header">
-                                <Link to={`/auctions/${auction.id}`}>{auction.title}</Link>
-                            </h3>
+                        <div key={auction.id} className="auctions-card">
+                            <Link to={`/auctions/${auction.id}`} style={{ textDecoration: 'none', position: 'relative' }}>
+                                <img src={`${auction.picture}`} className='auction-image' />
+                                <h1 className='auction-description'>{auction.title}</h1>
+                            </Link>
+
                         </div>
                     ))}
-                </ul>
+                </div>
+
+
             </main>
         );
     }

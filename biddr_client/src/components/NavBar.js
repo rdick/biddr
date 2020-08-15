@@ -10,7 +10,7 @@ const NavBar = props => {
         <>
             <div className="nav-bar">
 
-                <h1 className='nav-logo' >Luxor</h1>
+                <h1 className='nav-logo'>Luxor</h1>
                 {/* <div className='nav-items'> */}
                 <NavLink exact to="/" className="nav-item" >
                     About

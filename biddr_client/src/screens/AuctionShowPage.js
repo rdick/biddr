@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Auction } from '../api/auction'
 import { Bid } from '../api/bid'
+import './AuctionShowPage.css'
 
 const AuctionShowPage = props => {
     const [auction, setAuction] = useState({ bids: [{ price: 0 }] })
@@ -78,45 +79,54 @@ const AuctionShowPage = props => {
     } else {
         return (
             <main className="AuctionShowPage">
-                <div className="ui teal clearing segment ">
-                    <div>
-                        <h1>{auction.title}</h1>
-                        <p>{auction.description}</p>
-                        <p>{auction.reserve_price}</p>
-                        <p>{auction.ends_at}</p>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <strong>{error}</strong>
-                    </div>
-                    <form onSubmit={handleSubmit}>
+                <div className='welcome-container'>
+                    <div className="ui teal clearing segment ">
                         <div>
-                            <input
-                                name="price"
-                                id="price"
-                                type="number"
-                                onChange={handleChange}
-                                value={text1.price}
-                            />
+                            <img src={`${auction.picture}`}></img>
+                            <h1 className='auction-title'>{auction.title}</h1>
+
+                            <p >{auction.description}</p>
+                            <p >{auction.reserve_price}</p>
+                            <p >{auction.ends_at}</p>
                         </div>
+                    </div>
+                    <div>
                         <div>
-                            <button>Bid</button>
+                            <strong>{error}</strong>
                         </div>
-                    </form>
-                </div>
-                <h2 className="ui horizontal divider header">Previous Bids</h2>
-                <div className="ui segment">
-                    <ul className="ui list">
-                        {auction.bids.map(bid => (
-                            <div key={bid.id} className="ui raised clearing segment">
-                                <li>${bid.price} on {bid.created_at.toString().split("T")[0]}</li>
+                        <form onSubmit={handleSubmit}>
+                            <div>
+                                <input
+                                    placeholder="Place Your Bid"
+                                    name="price"
+                                    id="price"
+                                    type="number"
+                                    className='bid-input'
+                                    onChange={handleChange}
+                                    value={text1.price}
+                                />
                             </div>
-                        )
-                        )}
+                            <div>
+                                <button>Bid</button>
+                            </div>
+                        </form>
+                    </div>
+                    <h2 className="ui horizontal divider header">Previous Bids</h2>
+                    <div className="ui segment">
+                        <ul className="ui list">
+                            {auction.bids.map(bid => (
+                                <div key={bid.id} className="ui raised clearing segment">
+                                    <li>${bid.price} on {bid.created_at.toString().split("T")[0]}</li>
+                                </div>
+                            )
+                            )}
 
 
-                    </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fill">
+                    <img src="https://image.freepik.com/free-photo/abstract-background-luxury-cloth-liquid-wave-wavy-folds_34170-23.jpg" alt="" />
                 </div>
             </main>
         );

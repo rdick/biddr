@@ -9,6 +9,8 @@
 }
 
 .nav-logo {
+    padding-top: 0.10em;
+    padding-left: 0.20em;
     font-size: 1.5em;
     font-family: 'Cinzel', serif;
 }
