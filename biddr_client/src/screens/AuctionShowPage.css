@@ -28,3 +28,58 @@ color:  whitesmoke;
     border-bottom: grey solid 1px;
     
 }
+
+.auction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.auction-picture {
+    width: 60%;
+    border-radius: 30px;
+    border: gainsboro 1px solid;
+    overflow: hidden;
+}
+
+.auction-title {
+
+}
+
+.auction-description {
+
+}
+
+.auction-description {
+
+}
+
+.auction-reserve-price {
+
+}
+
+.auction-date {
+
+}
+
+.auction-bid-title {
+
+}
+
+.auction-bids {
+
+}
+
+@media (max-width:1000px) {
+	.auction-picture {
+        width: 80%;
+    }
+}
+
+@media (max-width:480px) {
+	.auction-picture {
+        width: 90%;
+    }
+}
+

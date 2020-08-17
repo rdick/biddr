@@ -80,14 +80,14 @@ const AuctionShowPage = props => {
         return (
             <main className="AuctionShowPage">
                 <div className='welcome-container'>
-                    <div className="ui teal clearing segment ">
-                        <div>
-                            <img src={`${auction.picture}`}></img>
+                    <div>
+                        <div className="auction-container">
+                            <img className='auction-picture' src={`${auction.picture}`}></img>
                             <h1 className='auction-title'>{auction.title}</h1>
 
-                            <p >{auction.description}</p>
-                            <p >{auction.reserve_price}</p>
-                            <p >{auction.ends_at}</p>
+                            <p className="auction-description">{auction.description}</p>
+                            <p className="auction-reserve-price">{auction.reserve_price}</p>
+                            <p className="auction-date">{auction.ends_at}</p>
                         </div>
                     </div>
                     <div>
@@ -111,12 +111,12 @@ const AuctionShowPage = props => {
                             </div>
                         </form>
                     </div>
-                    <h2 className="ui horizontal divider header">Previous Bids</h2>
+                    <h2 className="auction-bid-title">Previous Bids</h2>
                     <div className="ui segment">
                         <ul className="ui list">
                             {auction.bids.map(bid => (
                                 <div key={bid.id} className="ui raised clearing segment">
-                                    <li>${bid.price} on {bid.created_at.toString().split("T")[0]}</li>
+                                    <li className="auction-bids" > ${bid.price} on {bid.created_at.toString().split("T")[0]}</li>
                                 </div>
                             )
                             )}
