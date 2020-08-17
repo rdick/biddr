@@ -34,7 +34,7 @@ const AuctionIndexPage = props => {
                 <div className='auction-items'>
                     {auctions.map((auction) => (
                         <div key={auction.id} className="auctions-card">
-                            <Link to={`/auctions/${auction.id}`} style={{ textDecoration: 'none', position: 'relative' }}>
+                            <Link to={`/auctions/${auction.id}`} style={{ textDecoration: 'none', position: 'relative', display: "flex", justifyContent: "center" }}>
                                 <img src={`${auction.picture}`} className='auction-image' />
                                 <h1 className='auction-description'>{auction.title}</h1>
                             </Link>
