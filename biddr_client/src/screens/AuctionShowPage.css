@@ -1,33 +1,14 @@
-.auction-title {
-    color:white;
-    font-family: 'Cinzel', serif;
-    font-size: 4em;
-    padding: 0.5em 0.25em;
-}
-.auction-description {
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-font-size: 2.5em;
-font-weight: 200;
-letter-spacing: 0.2em;
-color:  whitesmoke;
-}
-
-.bid-input {
+.AuctionShowPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url("https://image.freepik.com/free-photo/abstract-background-luxury-cloth-liquid-wave-wavy-folds_34170-23.jpg");
+    background-size: cover;
+    background-position: center;
     
-    margin: 1em 0;
-    font-size: 1.5em;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    color: lightgray;
-    background-color: #5050;
-    border: none;
-    border-bottom: grey solid 1px;
-    
-}
+    /* background-repeat: none; */
+  }
 
 .auction-container {
     display: flex;
@@ -38,47 +19,93 @@ color:  whitesmoke;
 
 .auction-picture {
     width: 60%;
+    max-height: 80vh;
     border-radius: 30px;
     border: gainsboro 1px solid;
     overflow: hidden;
 }
 
 .auction-title {
-
+    color:white;
+    font-family: 'Cinzel', serif;
+    font-size: 4em;
+    margin-top: 0.75em;
+    width: 60%;
+    text-align: center;
 }
 
-.auction-description {
-
+.auction-info {
+    margin-top: 0.75em;
+    margin-bottom: 0.25em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.5em;
+    font-weight: 200;
+    line-height: 1.6em;
+    color:  whitesmoke;
 }
 
-.auction-description {
-
+.bid-container {
+    text-align: center;
+    width: 60%;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
-.auction-reserve-price {
-
+.bid-input {
+    margin: 1em 0;
+    font-size: 1.5em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    text-align: center;
+    color: lightgray;
+    background-color: #5050;
+    border: none;
+    border-bottom: grey solid 1px; 
 }
 
-.auction-date {
-
+.buy-sell-button {
+    border: whitesmoke 1px solid;
+    border-radius: 30px;
+    padding: 0.5em 2.5em;
+    margin-left: 0.5em;
+    background-color: transparent;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    font-weight: 100;
+    transition: color 0.5s, background-color 0.5s;
 }
 
-.auction-bid-title {
-
-}
-
-.auction-bids {
-
+.buy-sell-button:hover {
+    background-color: whitesmoke;
+    color: #595654;
 }
 
 @media (max-width:1000px) {
 	.auction-picture {
         width: 80%;
     }
+    .auction-title {
+        width: 80%
+    }
+    .bid-container {
+        width: 80%;
+    }
 }
 
 @media (max-width:480px) {
 	.auction-picture {
+        width: 90%;
+    }
+    .auction-title {
+        width: 90%
+    }
+    .bid-container {
         width: 90%;
     }
 }

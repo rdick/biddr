@@ -26,7 +26,7 @@ users = User.all
 NUM_AUCTION.times do 
     created_at = Faker::Date.backward(days: 30 )
     a = Auction.create(
-        title: Faker::Hacker.say_something_smart,
+        title: Faker::Vehicle.make_and_model,
         description: Faker::ChuckNorris.fact,
         ends_at: Faker::Date.forward(days: 30*1),
         user: users.sample, 
