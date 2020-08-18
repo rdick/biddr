@@ -27,6 +27,8 @@ gem 'rack-cors'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'letter_opener'
 gem 'active_model_serializers'
+gem 'faker'
+gem 'rails_same_site_cookie'
 # gems listed above here are considered production gems. These should gems that are core to your application
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +48,7 @@ group :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'faker'
+  gem 'rails_same_site_cookie'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

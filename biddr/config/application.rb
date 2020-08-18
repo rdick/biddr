@@ -35,7 +35,7 @@ module Biddr
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         # origins accepts an array of domain names. These are all the whitelisted DOMAINS that are allowed to send CORS (cross origin ajax requests) requests
-        origins 'localhost:3000', '127.0.0.1:3000'
+        origins ['auction-react3.herokuapp.com','localhost:3000', '127.0.0.1:3000']
         resource(
           "/api/*", # only allow CORS to paths that look like /api
           headers: :any, # allow requests to contain any headers
