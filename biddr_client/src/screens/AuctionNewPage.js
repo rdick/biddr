@@ -3,7 +3,7 @@ import { Auction } from '../api/auction'
 import './AuctionNewPage.css'
 
 const AuctionNewPage = props => {
-    const [text1, setText1] = useState({ title: "", description: "", ends_at: "", reserve_price: "" });
+    const [text1, setText1] = useState({ title: "", description: "", ends_at: "", reserve_price: "", picture: "" });
     const [error, setError] = useState('')
 
     function handleChange(evt) {
@@ -77,7 +77,17 @@ const AuctionNewPage = props => {
                                 onChange={handleChange}
                                 value={text1.reserve_price}
                             />
+
                         </div>
+                        <input
+                            className='new-input input-name'
+                            name="picture"
+                            id="picture"
+                            type="text"
+                            placeholder="Picture URL"
+                            onChange={handleChange}
+                            value={text1.picture}
+                        />
                         <button className='buy-sell-button new-submit'>Submit</button>
 
                     </form>
