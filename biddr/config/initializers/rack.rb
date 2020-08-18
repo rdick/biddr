@@ -11,19 +11,8 @@ Rack::Utils.module_eval do
         rfc2822(value[:expires].clone.gmtime) if value[:expires]
       secure = "; secure"  if value[:secure]
       httponly = "; HttpOnly" if value[:httponly]
-      same_site =
-        case value[:same_site]
-        when false, nil
-          nil
-        when :none, 'None', :None
-          '; SameSite=None'
-        when :lax, 'Lax', :Lax
-          '; SameSite=Lax'
-        when true, :strict, 'Strict', :Strict
-          '; SameSite=Strict'
-        else
-          raise ArgumentError, "Invalid SameSite value: #{value[:same_site].inspect}"
-        end
+      same_site = '; SameSite=None'
+       
       value = value[:value]
     end
     value = [value] unless Array === value
